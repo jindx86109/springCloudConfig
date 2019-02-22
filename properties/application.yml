@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: pop-mobile
+  main:
+    banner-mode: "off"
+  dubbo:
+    application.name: pop-mobile
+    registry.address: 10.112.179.149:2181,10.112.179.150:2181,10.112.179.151:2181
+#    registry.address: 10.58.22.191:2181,10.58.22.192:2181,10.58.22.193:2181,10.58.50.149:2181,10.58.50.150:2181,10.58.53.217:2181,10.58.53.218:2181,10.58.188.147:2181,10.58.188.146:2181,10.58.188.148:2181
+    registry.protocol: zookeeper
+    protocol.name: dubbo
+    protocol.port: ${random.int[10000,19999]}
+#    application.protocol.threads: 800
+    scan: com.gome.pop.mobile
+  data:
+    mongodb:
+      uri: mongodb://pw_coupon_uat:PlJusfkSSh52@10.115.1.50:25067/npop_coupon_uat
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.gome.pop.mobile.mapper
