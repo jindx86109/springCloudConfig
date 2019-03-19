@@ -2,7 +2,7 @@ spring:
   application:
     name: pop-mobile
   main:
-    banner-mode: "off"
+    banner-mode: "off "
   dubbo:
     application.name: pop-mobile
     registry.address: 10.112.179.149:2181,10.112.179.150:2181,10.112.179.151:2181
